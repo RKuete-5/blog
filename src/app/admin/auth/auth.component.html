@@ -1,0 +1,23 @@
+<div class="_formcontainer">
+        <div class="header">
+                <i class="fas fa-lock fa-4x"></i>
+        </div>
+        <div class="body">
+            <form [formGroup]="AuthForm">
+            
+                    <div class="form-field">
+                        <input id="phone" type="text" placeholder="Phone" formControlName="phone">
+                        <label for="phone"><i class="fal fa-phone"></i>&nbsp;{{'Phone'}}</label>
+                    </div>
+                    <div class="form-field">
+                      <input id="password" type="password" placeholder="Password" formControlName="password">
+                      <label for="password"><i class="fal fa-lock"></i>&nbsp;{{'Password'}}</label>
+                  </div>
+
+                  <div class="action">
+                        <button type="button" (click)="login()" [disabled]="AuthForm.invalid">{{'Continue'}}&nbsp;<i *ngIf="spin == false" class="fal fa-arrow-right"></i> <i *ngIf="spin == true" class="fas fa-spinner fa-spin"></i></button>
+                  </div>
+            
+            </form>
+        </div>
+</div>

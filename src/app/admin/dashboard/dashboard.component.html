@@ -1,0 +1,31 @@
+<div class="dashcontainer">
+
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fas fa-lightbulb _color"></i>
+        </div>
+        <div class="mpav_">
+            <div class="mlink">
+                <div class="mlink_item">
+                    <a routerLink="/dashboard/fabout" routerLinkActive="active">
+                        <i class="fal fa-user _color"></i></a>
+                </div>
+                <div class="mlink_item">
+                    <a routerLink="/dashboard/fskill" routerLinkActive="active">
+                        <i class="fal fa-server _color"></i></a>
+                </div>
+                <div class="mlink_item">
+                    <a routerLink="/dashboard/fwork" routerLinkActive="active">
+                        <i class="fal fa-briefcase _color"></i></a>
+                </div>
+                <div class="mlink_item">
+                    <a routerLink="/dashboard/fstudy" routerLinkActive="active">
+                        <i class="fal fa-clock _color"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="view-state">
+        <router-outlet></router-outlet>
+    </div>
+</div>

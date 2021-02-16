@@ -1,0 +1,75 @@
+
+
+<!-- start navigation -->
+<div class="v_nav_fixed">
+    <div class="nav_item">
+      <a (click)="scrollTo('section1')"><i class="fal fa-home" [ngClass]="{'fa-2x' : currentSection == 'section1' }"></i></a>
+      <div class="drop-pane" (click)="scrollTo('section1')"><span>{{'Home'}}</span> </div>
+    </div>
+    <div class="nav_item">
+      <a (click)="scrollTo('section2')"><i class="fal fa-user" [ngClass]="{'fa-2x' : currentSection == 'section2' }"></i></a>
+      <div class="drop-pane" (click)="scrollTo('section2')"><span>{{'About me'}}</span> </div>
+    </div>
+    <div class="nav_item">
+      <a (click)="scrollTo('section3')"><i class="fal fa-clock" [ngClass]="{'fa-2x' : currentSection == 'section3' }"></i></a>
+      <div class="drop-pane" (click)="scrollTo('section3')"><span>{{'Timeline'}}</span> </div>
+    </div>
+    <div class="nav_item">
+      <a (click)="scrollTo('section4')"><i class="fal fa-server" [ngClass]="{'fa-2x' : currentSection == 'section4' }"></i></a>
+      <div class="drop-pane" (click)="scrollTo('section4')"><span>{{'Skills'}}</span> </div>
+    </div>
+    <div class="nav_item">
+      <a (click)="scrollTo('section5')"><i class="fal fa-briefcase" [ngClass]="{'fa-2x' : currentSection == 'section5' }"></i></a>
+      <div class="drop-pane" (click)="scrollTo('section5')"><span>{{'My Works'}}</span> </div>
+    </div>
+    <div class="nav_item">
+      <a (click)="scrollTo('section6')"><i class="fal fa-phone" [ngClass]="{'fa-2x' : currentSection == 'section6' }"></i></a>
+      <div class="drop-pane" (click)="scrollTo('section6')"><span>{{'Contact'}}</span> </div>
+    </div>
+</div>
+<!-- end navigation -->
+
+
+<!-- start body -->
+<div id="parent" scrollpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)">
+  <div id="section1" class="section">
+      <app-home></app-home>
+  </div>
+  <div id="section2" class="section">
+      <app-about></app-about>
+  </div>
+  <div id="section3" class="section">
+      <app-timeline></app-timeline>
+  </div>
+  <div id="section4" class="section">
+    <app-skills></app-skills>
+  </div>
+  <div id="section5" class="section">
+    <app-works></app-works>
+  </div>
+  <div id="section6" class="section">
+      <app-contact></app-contact>
+  </div>
+</div>
+<!-- end body -->
+
+
+<!-- FAB -->
+<div class="v_bubble_chat">
+    <div class="_container">
+        <button class="btn-fab" (click)="bubble()">
+            <i class="fal" [ngClass]="{'fa-comment': state == false, 'fa-times': state == true}"></i>
+        </button>
+
+        <div class="chat-box" [ngStyle]="state == true ? {'width':'350px', 'height':'400px'}:{'width':'0px', 'height':'0px'}">
+          <div class="up">
+              <div class="title">
+                  <span>{{'Assistant Bot'}}</span>
+              </div>
+          </div>
+          <div class="down">
+              
+          </div>
+        </div>
+   </div>
+</div>
