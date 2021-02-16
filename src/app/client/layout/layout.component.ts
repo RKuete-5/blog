@@ -12,7 +12,7 @@ export class LayoutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.scrollTo('section3');
+//     this.scrollTo('section3');
   }
 
 
